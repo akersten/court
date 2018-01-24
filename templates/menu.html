@@ -1,0 +1,55 @@
+{% extends "_base.html" %}
+{% block title %}Menu{% endblock %}
+
+{% block body %}
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Homebase - {{ vm.hostname }}</h1>
+            <h2 class="subtitle">Main menu</h2>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="subtitle">System</h1>
+                    <ul>
+                        <li>
+                            <a class="button" href="#">Reboot</a>
+                        </li>
+                        <li>
+                            <a class="button" href="#">Update Homebase</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <h1 class="subtitle">Reporting</h1>
+                    <p class="content">Reporting to: {{ vm.vall }} - {{ vm.time }}</p>
+                </div>
+
+                <div class="column">
+                    <h1 class="subtitle">Status</h1>
+                    <ul>
+                        <li>
+                            <div class="tags has-addons">
+                                <span class="tag">Uptime</span>
+                                <span class="tag is-info">{{ vm.uptime }}</span>
+                            </div>
+                            <div class="tags has-addons">
+                                <span class="tag">DNS</span>
+                                <span class="tag is-success">Online</span>
+                            </div>
+                            <div class="tags has-addons">
+                                <span class="tag">md0</span>
+                                <span class="tag is-success">Online</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+{% endblock %}
