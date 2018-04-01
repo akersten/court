@@ -3,16 +3,16 @@
  * additional framework fixes are then applied.
  * ********************************************************************************************************************/
 
-@import "cutetemplate-variables";
+@import "court-variables";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// region Map framework variables to cutetemplate variables
+// region Map framework variables to court variables
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-$family-sans-serif: $cutetemplate-sans-serif-font;
+$family-sans-serif: $court-sans-serif-font;
 
-$primary: $cutetemplate-primary;
-$info: $cutetemplate-secondary;
+$primary: $court-primary;
+$info: $court-secondary;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // endregion
@@ -22,15 +22,14 @@ $info: $cutetemplate-secondary;
 // region Bulma variable overrides.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-$footer-background-color: $cutetemplate-black;
-$card-background-color: $cutetemplate-white;
+$footer-background-color: $court-black;
+$card-background-color: $court-white;
 
-$navbar-background-color: $cutetemplate-black;
-$navbar-item-hover-background-color: $cutetemplate-dark;
+$navbar-background-color: $court-black;
+$navbar-item-hover-background-color: $court-dark;
 
-$black: $cutetemplate-black;
+$black: $court-black;
 
-$link: $cutetemplate-primary-accent;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // endregion

@@ -4,7 +4,7 @@
 
 clear
 
-echo "CuteTemplate build started..."
+echo "Court build started..."
 
 echo "  Building stylesheets..."
 

@@ -1,0 +1,47 @@
+/***********************************************************************************************************************
+ * Styles specific to court.
+ **********************************************************************************************************************/
+/***********************************************************************************************************************
+ * Here we define any variables we use across Court. They're defined here in order to be accessible to all the
+ * SCSS files we build with the project. They are read in court.scss and used there to override the default framework
+ * styles.
+ * ********************************************************************************************************************/
+/***********************************************************************************************************************
+ * Common variables for the cuteworks framework.
+ * ********************************************************************************************************************/
+html {
+  background-color: #0f1214;
+  /* For pages that aren't long enough, don't have a bright white background. */ }
+
+/* The Bulma $link variable is used for form highlight, which we want to be the primary accent color. But for actual
+ * links, it's too hard to read. */
+a {
+  color: #4ecdc4; }
+
+/* Main title should use a fancy font. */
+.hero .title {
+  font-family: "Pacifico", sans-serif; }
+
+body, section.section {
+  background-color: #dad6d5; }
+
+/* Default text content (other than headers) should use the serif font. */
+.content {
+  font-family: "Roboto Slab", serif; }
+
+/* Color should be white in the footer and titles should be smaller. */
+.footer {
+  color: #dad6d5;
+  font-size: 0.9rem; }
+  .footer .title, .footer .subtitle {
+    color: #dad6d5;
+    /* Need the color set here too, .title has a color property. */
+    font-size: 1.25rem; }
+  .footer a {
+    color: #ffe66d;
+    /* The accent color is ok in the footer for links. */
+    /* Reset size for the icons in the footer, they don't look right at 0.9rem. */ }
+    .footer a .icon {
+      font-size: 1rem; }
+
+/*# sourceMappingURL=court.css.map */

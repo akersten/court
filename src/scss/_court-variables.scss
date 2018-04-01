@@ -1,0 +1,23 @@
+/***********************************************************************************************************************
+ * Here we define any variables we use across Court. They're defined here in order to be accessible to all the
+ * SCSS files we build with the project. They are read in court.scss and used there to override the default framework
+ * styles.
+ * ********************************************************************************************************************/
+
+@import "cuteworks-variables";
+
+$court-block-font: 'Bungee', sans-serif;
+$court-sans-serif-font: 'Yantramanav', sans-serif;
+$court-serif-font: 'Roboto Slab', serif;
+
+$court-black: #0f1214;
+$court-dark: #292f36;
+$court-light: #dad6d5;
+$court-white: #f7fff7;
+
+$court-primary: #4ecdc4;
+
+$court-secondary: #ff6b6b;
+
+$court-primary-accent: #ffe66d;
+
