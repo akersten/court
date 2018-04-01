@@ -1,0 +1,121 @@
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-one-quarter">
+                <h1 class="title">{{ vm.hostname }}</h1>
+                <h2 class="subtitle">{{ vm.ip }} ({{ vm.fqdn }})</h2>
+            </div>
+            <div class="column content">
+                <div class="field is-grouped is-grouped-multiline">
+                    <div class="control">
+                        <div class="tags has-addons">
+                            <span class="tag">Uptime</span>
+                            <span class="tag is-primary">{{ vm.uptime }}</span>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="tags has-addons">
+                            <span class="tag">DNS</span>
+                            <span class="tag is-success">Online</span>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="tags has-addons">
+                            <span class="tag">md0</span>
+                            <span class="tag is-success">Online</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h1 class="title">Connectivity</h1>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h1 class="title">Load</h1>
+        <div class="columns">
+            <div class="column">
+                <h2 class="subtitle">CPU and Memory</h2>
+                <label class="label">CPU ({{ vm.cpu_util }}%)</label>
+                <progress class="progress" value="{{ vm.cpu_util }}" max="100"></progress>
+                <label class="label">Memory ({{ vm.mem_used }} MiB / {{ vm.mem_total }} MiB)</label>
+                <progress class="progress" value="{{ vm.mem_used }}" max="{{ vm.mem_total }}"></progress>
+            </div>
+            <div class="column">
+                <h2 class="subtitle">Top CPU</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>PID</th>
+                            <th>Command</th>
+                            <th>Usage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for proc in vm.top_cpus %}
+                            <tr>
+                                <td>
+                                    {{ proc[0] }}
+                                </td>
+                                <td>
+                                    {{ proc[1] }}
+                                </td>
+                                <td>
+                                    {{ proc[-1] }}%
+                                </td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <td>No data</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="column">
+                <h2 class="subtitle">Top Memory</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>PID</th>
+                            <th>Command</th>
+                            <th>Usage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for proc in vm.top_cpus %}
+                            <tr>
+                                <td>
+                                    {{ proc[0] }}
+                                </td>
+                                <td>
+                                    {{ proc[1] }}
+                                </td>
+                                <td>
+                                    {{ proc[-1] }}%
+                                </td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <td>No data</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h1 class="title">Storage</h1>
+    </div>
+</section>

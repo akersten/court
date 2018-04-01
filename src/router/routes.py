@@ -6,6 +6,7 @@ from flask import Flask
 
 from . import init_routes
 from . import authentication
+from . import home
 
 
 def init_all_routes(flask_app: Flask) -> None:
@@ -16,3 +17,4 @@ def init_all_routes(flask_app: Flask) -> None:
     """
     init_routes(flask_app)
     authentication.init_routes(flask_app)
+    home.init_routes(flask_app)
