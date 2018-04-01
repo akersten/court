@@ -1,0 +1,23 @@
+/***********************************************************************************************************************
+ * Here we define any variables we use across CuteTemplate. They're defined here in order to be accessible to all the
+ * SCSS files we build with the project. They are read in cutetemplate.scss and used there to override the default framework
+ * styles.
+ * ********************************************************************************************************************/
+
+@import "cuteworks-variables";
+
+$cutetemplate-block-font: 'Bungee', sans-serif;
+$cutetemplate-sans-serif-font: 'Yantramanav', sans-serif;
+$cutetemplate-serif-font: 'Roboto Slab', serif;
+
+$cutetemplate-black: #220901;
+$cutetemplate-dark: #361f18;
+$cutetemplate-light: #dad6d5;
+$cutetemplate-white: #eceaea;
+
+$cutetemplate-primary: #bc3908;
+
+$cutetemplate-secondary: #621708;
+
+$cutetemplate-primary-accent: #ffbb1e;
+$cutetemplate-secondary-accent: #941b0c;
