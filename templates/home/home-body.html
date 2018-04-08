@@ -45,7 +45,7 @@
                 <h2 class="subtitle">CPU and Memory</h2>
                 <label class="label">CPU ({{ vm.cpu_util }}%)</label>
                 <progress class="progress" value="{{ vm.cpu_util }}" max="100"></progress>
-                <label class="label">Memory ({{ vm.mem_used }} MiB / {{ vm.mem_total }} MiB)</label>
+                <label class="label">Memory ({{ vm.mem_util }}% &mdash; {{ vm.mem_used }} MiB / {{ vm.mem_total }} MiB)</label>
                 <progress class="progress" value="{{ vm.mem_used }}" max="{{ vm.mem_total }}"></progress>
             </div>
             <div class="column">
@@ -65,7 +65,7 @@
                                     {{ proc[0] }}
                                 </td>
                                 <td>
-                                    {{ proc[1] }}
+                                    {{ ' '.join(proc[1:-1]) }}
                                 </td>
                                 <td>
                                     {{ proc[-1] }}%
@@ -90,13 +90,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {% for proc in vm.top_cpus %}
+                        {% for proc in vm.top_mems %}
                             <tr>
                                 <td>
                                     {{ proc[0] }}
                                 </td>
                                 <td>
-                                    {{ proc[1] }}
+                                    {{ ' '.join(proc[1:-1]) }}
                                 </td>
                                 <td>
                                     {{ proc[-1] }}%
